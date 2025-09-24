@@ -419,14 +419,6 @@ void Kpad::showAbout() {
 
 // -------------------- Edit / Format --------------------
 void Kpad::applyFont(const QString &font) {
-    // QTextCursor cursor = textEdit->textCursor();
-    // QTextCharFormat format;
-    // format.setFont(font);
-
-    // if (cursor.hasSelection()) {
-    //     cursor.mergeCharFormat(format);
-    // }
-    // textEdit->mergeCurrentCharFormat(format);
     QTextCharFormat fmt;
     fmt.setFontFamily(font);
     applyFormatToSelection(fmt);
@@ -479,77 +471,15 @@ void Kpad::changeFontSizeDelta(int delta) {
 }
 
 void Kpad::increaseFontSize() {
-    // QTextCursor cursor = textEdit->textCursor();
-    // QTextCharFormat format = cursor.charFormat();
-    // int currentSize = format.fontPointSize();
-
-    // if (currentSize <= 0) {
-    //     currentSize = textEdit->font().pointSize(); // fallback to editor's default font size
-    // }
-
-    // int newSize = currentSize + 1;
-    // format.setFontPointSize(newSize);
-
-    // if (cursor.hasSelection()) {
-    //     cursor.mergeCharFormat(format);
-    // }
-    // textEdit->mergeCurrentCharFormat(format);
-
-    // // --- Update the font size box ---
-    // fontSizeBox->setCurrentText(QString::number(newSize));
     changeFontSizeDelta(+1);
 }
 
 void Kpad::decreaseFontSize() {
-    // QTextCursor cursor = textEdit->textCursor();
-    // QTextCharFormat format = cursor.charFormat();
-    // int currentSize = format.fontPointSize();
-
-    // if (currentSize <= 0) {
-    //     currentSize = textEdit->font().pointSize(); // fallback to editor's default font size
-    // }
-
-    // int newSize = std::max(1, currentSize - 1); // prevent going below 1
-    // format.setFontPointSize(newSize);
-
-    // if (cursor.hasSelection()) {
-    //     cursor.mergeCharFormat(format);
-    // }
-    // textEdit->mergeCurrentCharFormat(format);
-
-    // // --- Update the font size box ---
-    // fontSizeBox->setCurrentText(QString::number(newSize));
     changeFontSizeDelta(-1);
 }
 
 // Toggle Bold for entire selection
 void Kpad::setBold() {
-    // QTextCursor cursor = textEdit->textCursor();
-    // QTextCharFormat fmt;
-
-    // if (cursor.hasSelection()) {
-    //     // Determine if we should turn bold ON or OFF
-    //     bool makeBold = false;
-    //     QTextCursor temp = cursor;
-    //     temp.movePosition(QTextCursor::StartOfBlock, QTextCursor::KeepAnchor);
-    //     // If any character is not bold, we turn everything bold
-    //     cursor.movePosition(QTextCursor::StartOfBlock, QTextCursor::KeepAnchor);
-    //     fmt = cursor.charFormat();
-    //     makeBold = (fmt.fontWeight() != QFont::Bold);
-
-    //     fmt.setFontWeight(makeBold ? QFont::Bold : QFont::Normal);
-    //     cursor.mergeCharFormat(fmt);
-    // } else {
-    //     // No selection: toggle typing format
-    //     fmt.setFontWeight(textEdit->currentFont().weight() == QFont::Bold ? QFont::Normal : QFont::Bold);
-    //     textEdit->mergeCurrentCharFormat(fmt);
-    // }
-
-    // QTextCharFormat fmt;
-    // fmt.setFontWeight(textEdit->fontWeight() == QFont::Bold ? QFont::Normal : QFont::Bold);
-    // applyFormatToSelection(fmt);
-    // applyFormatToCursors(fmt);
-
     QTextCharFormat fmt;
     bool isBold = textEdit->fontWeight() == QFont::Bold;
     fmt.setFontWeight(isBold ? QFont::Normal : QFont::Bold);
@@ -563,24 +493,6 @@ void Kpad::setBold() {
 
 // Toggle Italic
 void Kpad::setItalic() {
-    // QTextCursor cursor = textEdit->textCursor();
-    // QTextCharFormat fmt;
-
-    // if (cursor.hasSelection()) {
-    //     bool makeItalic = false;
-    //     makeItalic = !cursor.charFormat().fontItalic();
-    //     fmt.setFontItalic(makeItalic);
-    //     cursor.mergeCharFormat(fmt);
-    // } else {
-    //     fmt.setFontItalic(!textEdit->currentFont().italic());
-    //     textEdit->mergeCurrentCharFormat(fmt);
-    // }
-
-    // QTextCharFormat fmt;
-    // fmt.setFontItalic(!textEdit->fontItalic());
-    // applyFormatToSelection(fmt);
-    // applyFormatToCursors(fmt);
-
     QTextCharFormat fmt;
     bool isItalic = textEdit->fontItalic();
     fmt.setFontItalic(!isItalic);
@@ -594,24 +506,6 @@ void Kpad::setItalic() {
 
 // Toggle Underline
 void Kpad::setUnderline() {
-    // QTextCursor cursor = textEdit->textCursor();
-    // QTextCharFormat fmt;
-
-    // if (cursor.hasSelection()) {
-    //     bool makeUnderline = false;
-    //     makeUnderline = !cursor.charFormat().fontUnderline();
-    //     fmt.setFontUnderline(makeUnderline);
-    //     cursor.mergeCharFormat(fmt);
-    // } else {
-    //     fmt.setFontUnderline(!textEdit->currentFont().underline());
-    //     textEdit->mergeCurrentCharFormat(fmt);
-    // }
-
-    // QTextCharFormat fmt;
-    // fmt.setFontUnderline(!textEdit->fontUnderline());
-    // applyFormatToSelection(fmt);
-    // applyFormatToCursors(fmt);
-
     QTextCharFormat fmt;
     bool isUnderlined = textEdit->fontUnderline();
     fmt.setFontUnderline(!isUnderlined);
