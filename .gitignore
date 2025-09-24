@@ -79,7 +79,7 @@ ui_*.h
 *.obj
 *.o
 *.so
-*.exe
+
 *.dll
 *.pdb
 *.ilk
