@@ -3,7 +3,6 @@
 Kpad is a lightweight, Notepad-style text editor built with **C++ and Qt**.  
 It is designed to be simple, fast, and easy to use while offering essential features such as text formatting and file management.
 
----
 ### ✨ Features
 - Open, edit, and save plain text files (`.txt` and others).
 - Basic text formatting: **bold**, *italic*, underline, font selection, and font size adjustment.
@@ -11,7 +10,6 @@ It is designed to be simple, fast, and easy to use while offering essential feat
 - Save As functionality.
 - Cross-platform (Windows, Linux, macOS — requires Qt).
 
----
 
 ### 📥 Installation
 
@@ -23,7 +21,6 @@ It is designed to be simple, fast, and easy to use while offering essential feat
 
 > Note: All required Qt DLLs are included. No need to install Qt separately.
 
----
 
 ### Option 2: Build From Source (Developers)
 
@@ -38,7 +35,7 @@ It is designed to be simple, fast, and easy to use while offering essential feat
 # Clone the repository
 ```bash
 git clone https://github.com/KevinDacanay/KPad-Text-Editor.git
-cd kpad
+cd KPad-Text-Editor
 
 # Configure and build (CMake example)
 cmake -B build -S .
@@ -48,7 +45,6 @@ The executable will be available in the `build/` folder.
 
 If using Qt Creator, simply open the project file and click **Run**.
 
----
 
 ### 🚀 Usage
 
@@ -62,7 +58,6 @@ Use the menu bar to:
 - `Ctrl+Alt+↑` / `Ctrl+Alt+↓` to add multiple cursors.
 - `Ctrl+Shift+V` to paste text without formatting.
 
----
 
 ### 🤝 Contributing
 
@@ -77,11 +72,10 @@ Push to your fork and open a Pull Request.
 
 Please make sure your code builds and follows the project’s style.
 
----
 
 ### 🗂️ Project Structure
 ```
-kpad/
+KPad/
 ├── src/             # Source code (C++/Qt files)
 ├── include/         # Header files
 ├── resources/       # Icons, .qrc resource file
@@ -90,14 +84,11 @@ kpad/
 └── README.md        # This file
 ```
 
----
-
 ### 📜 License
 
 This project is licensed under the MIT License.  
 You are free to use, modify, and distribute it under the terms of the license.
 
----
 
 ### 📌 Notes
 
