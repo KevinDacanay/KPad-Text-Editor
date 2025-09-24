@@ -37,7 +37,7 @@ It is designed to be simple, fast, and easy to use while offering essential feat
 
 # Clone the repository
 ```bash
-git clone https://github.com/yourusername/kpad.git
+git clone https://github.com/KevinDacanay/KPad-Text-Editor.git
 cd kpad
 
 # Configure and build (CMake example)
