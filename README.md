@@ -50,14 +50,12 @@ If using Qt Creator, simply open the project file and click **Run**.
 
 Launch Kpad.
 
-Use the menu bar to:
+Example uses:
 
 - **File → Open** to open a text file.
 - **File → Save/Save As** to save changes.
 - **Edit → Format** to change font size, style, and family.
-- `Ctrl+Alt+↑` / `Ctrl+Alt+↓` to add multiple cursors.
 - `Ctrl+Shift+V` to paste text without formatting.
-
 
 ### 🤝 Contributing
 
