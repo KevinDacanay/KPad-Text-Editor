@@ -36,19 +36,21 @@
     </item>
    </layout>
   </widget>
+  <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
      <width>600</width>
-     <height>17</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="actionCode"/>
     <addaction name="actionNewDocument"/>
     <addaction name="actionOpen"/>
     <addaction name="actionSave"/>
@@ -102,6 +104,9 @@
     <addaction name="actionRight_Align"/>
     <addaction name="separator"/>
     <addaction name="menuFormat_2"/>
+    <addaction name="separator"/>
+    <addaction name="actionHighlight"/>
+    <addaction name="actionTextColor"/>
    </widget>
    <widget class="QMenu" name="menuView">
     <property name="title">
@@ -109,6 +114,7 @@
     </property>
     <addaction name="actionZoom_In"/>
     <addaction name="actionZoom_Out"/>
+    <addaction name="actionToggleTheme"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -116,7 +122,6 @@
    <addaction name="menuFormat"/>
    <addaction name="menuAbout"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
   <action name="actionNewDocument">
    <property name="icon">
     <iconset theme="QIcon::ThemeIcon::DocumentNew">
@@ -127,7 +132,7 @@
     <string>New</string>
    </property>
    <property name="shortcut">
-    <string>Shift+N</string>
+    <string>Ctrl+N</string>
    </property>
   </action>
   <action name="actionOpen">
@@ -145,7 +150,7 @@
     </font>
    </property>
    <property name="shortcut">
-    <string>Shift+O</string>
+    <string>Ctrl+O</string>
    </property>
   </action>
   <action name="actionSave">
@@ -158,7 +163,7 @@
     <string>Save</string>
    </property>
    <property name="shortcut">
-    <string>Shift+S</string>
+    <string>Ctrl+S</string>
    </property>
   </action>
   <action name="actionSave_as">
@@ -184,7 +189,7 @@
     <string>Exit</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+X</string>
+    <string>Ctrl+Shift+X</string>
    </property>
   </action>
   <action name="actionCopy">
@@ -196,6 +201,9 @@
    <property name="text">
     <string>Copy</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
   </action>
   <action name="actionPaste">
    <property name="icon">
@@ -205,6 +213,9 @@
    </property>
    <property name="text">
     <string>Paste</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
    </property>
   </action>
   <action name="actionCut">
@@ -216,6 +227,9 @@
    <property name="text">
     <string>Cut</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
   </action>
   <action name="actionUndo">
    <property name="icon">
@@ -224,6 +238,9 @@
    </property>
    <property name="text">
     <string>Undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
    </property>
   </action>
   <action name="actionRedo">
@@ -234,6 +251,9 @@
    </property>
    <property name="text">
     <string>Redo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
    </property>
   </action>
   <action name="actionAbout_me">
@@ -253,6 +273,9 @@
    <property name="text">
     <string>Increase Font</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+=</string>
+   </property>
   </action>
   <action name="actionDecrease_Font">
    <property name="icon">
@@ -260,6 +283,9 @@
    </property>
    <property name="text">
     <string>Decrease Font</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+-</string>
    </property>
   </action>
   <action name="actionBold">
@@ -269,6 +295,9 @@
    <property name="text">
     <string>Bold</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
   </action>
   <action name="actionItalic">
    <property name="icon">
@@ -276,6 +305,9 @@
    </property>
    <property name="text">
     <string>Italic</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
    </property>
   </action>
   <action name="actionUnderline">
@@ -285,6 +317,9 @@
    <property name="text">
     <string>Underline</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
   </action>
   <action name="actionLeft_Align">
    <property name="icon">
@@ -292,6 +327,9 @@
    </property>
    <property name="text">
     <string>Left Align</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+L</string>
    </property>
   </action>
   <action name="actionCenter_Align">
@@ -301,6 +339,9 @@
    <property name="text">
     <string>Center Align</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+C</string>
+   </property>
   </action>
   <action name="actionRight_Align">
    <property name="icon">
@@ -308,6 +349,9 @@
    </property>
    <property name="text">
     <string>Right Align</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+R</string>
    </property>
   </action>
   <action name="actionSave_as_HTML">
@@ -325,6 +369,9 @@
    <property name="text">
     <string>Zoom In</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+=</string>
+   </property>
   </action>
   <action name="actionZoom_Out">
    <property name="icon">
@@ -332,6 +379,9 @@
    </property>
    <property name="text">
     <string>Zoom Out</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+-</string>
    </property>
   </action>
   <action name="actionDisc">
@@ -375,6 +425,61 @@
    </property>
    <property name="toolTip">
     <string>UpperRoman</string>
+   </property>
+  </action>
+  <action name="actionToggleTheme">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::WeatherClear"/>
+   </property>
+   <property name="text">
+    <string>Toggle Light/Dark Mode</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+D</string>
+   </property>
+  </action>
+  <action name="actionCode">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::Computer"/>
+   </property>
+   <property name="text">
+    <string>Code</string>
+   </property>
+  </action>
+  <action name="actionHighlight">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/highlight.png</normaloff>icons/highlight.png</iconset>
+   </property>
+   <property name="text">
+    <string>Highlight</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+  <action name="actionTextColor">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/text_color.png</normaloff>icons/text_color.png</iconset>
+   </property>
+   <property name="text">
+    <string>Text Color</string>
+   </property>
+   <property name="toolTip">
+    <string>Text Color</string>
    </property>
   </action>
  </widget>
